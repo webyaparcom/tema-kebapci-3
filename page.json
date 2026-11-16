@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": "uwlrqfotyo",
+      "name": {
+        "tr": "Menü",
+        "en": "Menu",
+        "ar": "القائمة"
+      },
+      "description": {
+        "tr": "Ocak tahtası ve porsiyon fiyatları (örnek).",
+        "en": "The grill board and portion prices (examples).",
+        "ar": "لوح الموقد وأسعار الحصص (أمثلة)."
+      },
+      "path": "hizmetler",
+      "icon": "restaurant_menu",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "7dfn24",
+          "u52kgx"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Ocak",
+        "en": "Hearth",
+        "ar": "الموقد"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "local_fire_department",
+      "desing": {
+        "header": [],
+        "body": [
+          "w5qh0r",
+          "jpmgos",
+          "12quhi"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Kırk yılın eğrisi, ocak kuralları ve misafir puanları (kurgusal).",
+        "en": "Forty years on a curve, grill rules and guest scores (fictional).",
+        "ar": "منحنى أربعين عامًا وقواعد الموقد وتقييمات الضيوف (افتراضية)."
+      }
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 2,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "u52kgx",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Adres, ocak saatleri ve harita.",
+        "en": "Address, grill hours and map.",
+        "ar": "العنوان وساعات الموقد والخريطة."
+      }
+    }
+  ],
+  "desc": []
+}

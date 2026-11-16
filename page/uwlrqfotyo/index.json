@@ -1,0 +1,40 @@
+{
+  "id": "uwlrqfotyo",
+  "name": {
+    "tr": "Menü",
+    "en": "Menu",
+    "ar": "القائمة"
+  },
+  "description": {
+    "tr": "Ocak tahtası ve porsiyon fiyatları (örnek).",
+    "en": "The grill board and portion prices (examples).",
+    "ar": "لوح الموقد وأسعار الحصص (أمثلة)."
+  },
+  "keyword": {
+    "tr": "kebap, menü, fiyat",
+    "en": "kebab, menu, price",
+    "ar": "كباب، قائمة، سعر"
+  },
+  "path": "hizmetler",
+  "icon": "restaurant_menu",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "7dfn24",
+      "u52kgx"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Menü",
+    "en": "Menu",
+    "ar": "القائمة"
+  },
+  "date": "2026-11-16T20:25:24.368Z",
+  "update": "2026-11-16T20:35:11.691Z"
+}

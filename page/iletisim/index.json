@@ -1,0 +1,47 @@
+{
+  "name": {
+    "tr": "İletişim",
+    "en": "Contact",
+    "ar": "اتصل بنا"
+  },
+  "status": "play",
+  "category": "",
+  "id": "iletisim",
+  "url": "",
+  "path": "iletisim",
+  "index": 2,
+  "icon": "call",
+  "desing": {
+    "header": [],
+    "body": [
+      "u52kgx",
+      "k8mp01"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Adres, ocak saatleri ve harita.",
+    "en": "Address, grill hours and map.",
+    "ar": "العنوان وساعات الموقد والخريطة."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "İletişim",
+    "en": "Contact",
+    "ar": "اتصل بنا"
+  },
+  "keyword": {
+    "tr": "iletişim",
+    "en": "contact",
+    "ar": "اتصال"
+  },
+  "text": {},
+  "update": "2026-11-16T20:35:11.698Z",
+  "date": "2026-10-30"
+}
