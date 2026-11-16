@@ -1,0 +1,106 @@
+<section class="modulex-doner-porsiyon-tahtasi{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-doner-porsiyon-tahtasi-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* doner-porsiyon-tahtasi — menu-sekmeli-fiyat'ın kategori sekmeleri + «+» seçim özetinden farkı: kategori yok, seçim/toplam yok — tek bir porsiyon anahtarı bütün fiyat sütununu değiştirir (satır başına çoklu fiyat alanı), koyu tebeşir tahtası iskeleti (çift kesik çerçeve, iki sütunlu satırlar, eğik rozet, acılık göstergesi); body/menu-liste'nin alerjen/arama listesinden de ayrı. */
+  .modulex-doner-porsiyon-tahtasi { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-doner-porsiyon-tahtasi *, .modulex-doner-porsiyon-tahtasi *::before, .modulex-doner-porsiyon-tahtasi *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-doner-porsiyon-tahtasi :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-doner-porsiyon-tahtasi :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-doner-porsiyon-tahtasi :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-doner-porsiyon-tahtasi :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-doner-porsiyon-tahtasi img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-doner-porsiyon-tahtasi) img { height: auto; }
+  .modulex-doner-porsiyon-tahtasi [hidden] { display: none !important; }
+  .modulex-doner-porsiyon-tahtasi :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-doner-porsiyon-tahtasi :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-doner-porsiyon-tahtasi-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-doner-porsiyon-tahtasi-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-doner-porsiyon-tahtasi--bassiz .modulex-doner-porsiyon-tahtasi-bas { display: none; }
+  .modulex-doner-porsiyon-tahtasi-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-doner-porsiyon-tahtasi-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-doner-porsiyon-tahtasi-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-doner-porsiyon-tahtasi-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-doner-porsiyon-tahtasi-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-doner-porsiyon-tahtasi-dugme:hover { transform: translateY(-2px); }
+  .modulex-doner-porsiyon-tahtasi-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-doner-porsiyon-tahtasi-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-doner-porsiyon-tahtasi-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-doner-porsiyon-tahtasi-tahta { position: relative; display: grid; gap: clamp(22px, 3vw, 36px); padding: clamp(26px, 4.5vw, 60px); border: 2px solid --cizgi--; border-radius: --yuvarlak--; background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, --text-- 7%, transparent), transparent 70%); box-shadow: inset 0 0 0 12px color-mix(in srgb, --text-- 4%, transparent); }
+  .modulex-doner-porsiyon-tahtasi-tahta::before { content: ""; position: absolute; inset: 12px; border: 1px dashed color-mix(in srgb, --text-- 24%, transparent); border-radius: calc(--yuvarlak-- * 0.6); pointer-events: none; }
+  .modulex-doner-porsiyon-tahtasi-tbas { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px 32px; }
+  .modulex-doner-porsiyon-tahtasi-tgiris { display: grid; gap: 12px; max-width: 640px; }
+  .modulex-doner-porsiyon-tahtasi-tgiris .modulex-doner-porsiyon-tahtasi-baslik { letter-spacing: 0.01em; }
+  .modulex-doner-porsiyon-tahtasi-psecici { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 5px; border: 1px solid --cizgi--; border-radius: 999px; background: color-mix(in srgb, --text-- 8%, transparent); }
+  .modulex-doner-porsiyon-tahtasi:not(.modulex-doner-porsiyon-tahtasi--js) .modulex-doner-porsiyon-tahtasi-psecici { display: none; }
+  .modulex-doner-porsiyon-tahtasi-pdug { min-height: 44px; padding: 8px 18px; border: 0; border-radius: 999px; background: transparent; color: --text--; font: inherit; font-weight: 750; transition: background-color 0.25s ease, color 0.25s ease; }
+  .modulex-doner-porsiyon-tahtasi-pdug:hover { background-color: color-mix(in srgb, --text-- 12%, transparent); }
+  .modulex-doner-porsiyon-tahtasi-pdug[aria-pressed="true"] { background-color: --accent--; color: --accentText--; }
+  .modulex-doner-porsiyon-tahtasi-yemekler { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(28px, 5vw, 72px); }
+  .modulex-doner-porsiyon-tahtasi-yemek { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; column-gap: 16px; row-gap: 4px; padding-block: 16px; border-block-end: 1px dashed color-mix(in srgb, --text-- 26%, transparent); }
+  .modulex-doner-porsiyon-tahtasi-yad { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; }
+  .modulex-doner-porsiyon-tahtasi-yikon { color: --accentInk--; font-size: 22px; }
+  .modulex-doner-porsiyon-tahtasi-yisim { font-family: var(--mx-font-heading, inherit); font-size: 1.15rem; font-weight: 750; letter-spacing: 0.02em; }
+  .modulex-doner-porsiyon-tahtasi-yrozet { padding: 2px 9px; border: 1.5px solid --accent--; border-radius: 4px; color: --accentInk--; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; transform: rotate(-2deg); }
+  .modulex-doner-porsiyon-tahtasi-aci { display: inline-flex; color: --accentInk--; }
+  .modulex-doner-porsiyon-tahtasi-aci .material-symbols-outlined { font-size: 17px; }
+  .modulex-doner-porsiyon-tahtasi-yacik { grid-column: 1; color: --muted--; font-size: 0.9rem; }
+  .modulex-doner-porsiyon-tahtasi-fiyatlar { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: 14px; align-self: center; }
+  .modulex-doner-porsiyon-tahtasi-pf { display: grid; justify-items: end; min-width: 60px; color: --accentInk--; font-size: 1.2rem; font-weight: 850; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .modulex-doner-porsiyon-tahtasi-pad { color: --muted--; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .modulex-doner-porsiyon-tahtasi--js .modulex-doner-porsiyon-tahtasi-pf { display: none; }
+  .modulex-doner-porsiyon-tahtasi--js .modulex-doner-porsiyon-tahtasi-pf.modulex-doner-porsiyon-tahtasi--acik { display: grid; animation: modulex-doner-porsiyon-tahtasi-tebesir 0.45s ease both; }
+  .modulex-doner-porsiyon-tahtasi-tson { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+  .modulex-doner-porsiyon-tahtasi-tnot { max-width: 60ch; color: --muted--; font-size: 0.88rem; font-style: italic; }
+  @keyframes modulex-doner-porsiyon-tahtasi-tebesir { from { opacity: 0; transform: translateY(-6px) rotate(-4deg); filter: blur(2px); } to { opacity: 1; transform: none; filter: none; } }
+  @media (max-width: 768px) {
+    .modulex-doner-porsiyon-tahtasi-yemekler { grid-template-columns: minmax(0, 1fr); }
+    .modulex-doner-porsiyon-tahtasi-fiyatlar { gap: 10px; }
+    .modulex-doner-porsiyon-tahtasi-pf { min-width: 0; font-size: 1.05rem; }
+    .modulex-doner-porsiyon-tahtasi-psecici { width: 100%; justify-content: space-between; }
+    .modulex-doner-porsiyon-tahtasi-pdug { flex: 1 1 0; padding-inline: 10px; }
+  }
+  .modulex-doner-porsiyon-tahtasi-bag { color: inherit; text-decoration: none; }
+  .modulex-doner-porsiyon-tahtasi-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-doner-porsiyon-tahtasi-mbaslik { font-size: 1.05rem; font-weight: 700; }
+  .modulex-doner-porsiyon-tahtasi-mmetin { color: --muted--; font-size: 0.95rem; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-doner-porsiyon-tahtasi :is(.modulex-doner-porsiyon-tahtasi-baslik, .modulex-doner-porsiyon-tahtasi-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-doner-porsiyon-tahtasi-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-doner-porsiyon-tahtasi { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-doner-porsiyon-tahtasi *, .modulex-doner-porsiyon-tahtasi *::before, .modulex-doner-porsiyon-tahtasi *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-doner-porsiyon-tahtasi";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const porsiyonSec = (s, P) => {
+        const b = [...s.querySelectorAll("[data-psec]")];
+        if (b.length < 2) return;
+        s.classList.add(P + "--js");
+        const sec = (j) => {
+          b.forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.psec === j)));
+          s.querySelectorAll("[data-p]").forEach((c) => c.classList.toggle(P + "--acik", c.dataset.p === j));
+        };
+        b.forEach((x) => x.addEventListener("click", () => sec(x.dataset.psec)));
+        sec((b.find((x) => x.dataset.varsay === "1") || b[0]).dataset.psec);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      porsiyonSec(s, P, az);
+    });
+  })();
+</script>

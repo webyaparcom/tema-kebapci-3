@@ -1,0 +1,142 @@
+<header class="modulex-ust-iki-yuz{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-ust-iki-yuz-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</header>
+
+<style>
+  /* ust-iki-yuz — Çubuk aynı yerde iki farklı içerik taşır (sekme anahtarı): menü ile iletişim aynı satırı paylaşır — iletişim ayrı bir şerit ya da panel değil, dar alanda iki kat bilgi. */
+  .modulex-ust-iki-yuz { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-ust-iki-yuz *, .modulex-ust-iki-yuz *::before, .modulex-ust-iki-yuz *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-ust-iki-yuz :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-ust-iki-yuz :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-ust-iki-yuz :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-ust-iki-yuz :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-ust-iki-yuz img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-ust-iki-yuz) img { height: auto; }
+  .modulex-ust-iki-yuz [hidden] { display: none !important; }
+  .modulex-ust-iki-yuz :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-ust-iki-yuz :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-ust-iki-yuz-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-ust-iki-yuz-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-ust-iki-yuz--bassiz .modulex-ust-iki-yuz-bas { display: none; }
+  .modulex-ust-iki-yuz-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-ust-iki-yuz-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-ust-iki-yuz-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-ust-iki-yuz-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-ust-iki-yuz-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-ust-iki-yuz-dugme:hover { transform: translateY(-2px); }
+  .modulex-ust-iki-yuz-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-ust-iki-yuz-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-ust-iki-yuz-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-ust-iki-yuz { position: relative; z-index: 900; }
+  .modulex-ust-iki-yuz-logo { display: inline-flex; flex: 0 1 auto; min-width: 0; align-items: center; color: inherit; text-decoration: none; }
+  /* dar ekranda geniş logo/uzun ad çubuğu taşırmasın: logo daralır (img max-width 100%), ad sarar */
+  .modulex-ust-iki-yuz-logo img { width: auto; max-height: --logoH--; }
+  .modulex-ust-iki-yuz-ad { font-family: var(--mx-font-heading, inherit); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .modulex-ust-iki-yuz-oge { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: inherit; font-weight: 600; text-decoration: none; transition: color 0.2s ease, background 0.2s ease; }
+  .modulex-ust-iki-yuz-oge:hover, .modulex-ust-iki-yuz-oge[aria-current="page"] { color: --accentInk--; }
+  .modulex-ust-iki-yuz-cta { display: inline-flex; flex: none; align-items: center; gap: 6px; min-height: 44px; padding: 8px 18px; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; white-space: nowrap; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .modulex-ust-iki-yuz-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -12px --accent--; }
+  .modulex-ust-iki-yuz-cta .material-symbols-outlined, .modulex-ust-iki-yuz-tel .material-symbols-outlined, .modulex-ust-iki-yuz-posta .material-symbols-outlined { font-size: 18px; }
+  .modulex-ust-iki-yuz-tel, .modulex-ust-iki-yuz-posta { display: inline-flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; white-space: nowrap; }
+  .modulex-ust-iki-yuz-tel:hover, .modulex-ust-iki-yuz-posta:hover { color: --accentInk--; }
+  .modulex-ust-iki-yuz-dil:empty { display: none; }
+  .modulex-ust-iki-yuz-ac { display: none; align-items: center; gap: 10px; min-width: 46px; min-height: 46px; padding: 0 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: inherit; font: inherit; font-weight: 700; }
+  .modulex-ust-iki-yuz-ac-ikon { display: grid; gap: 4px; width: 20px; }
+  .modulex-ust-iki-yuz-ac-ikon span { display: block; height: 2px; border-radius: 2px; background: currentColor; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .modulex-ust-iki-yuz--acik .modulex-ust-iki-yuz-ac-ikon span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .modulex-ust-iki-yuz--acik .modulex-ust-iki-yuz-ac-ikon span:nth-child(2) { opacity: 0; }
+  .modulex-ust-iki-yuz--acik .modulex-ust-iki-yuz-ac-ikon span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .modulex-ust-iki-yuz-kapat { display: inline-grid; place-items: center; width: 46px; height: 46px; border: 1px solid --cizgi--; border-radius: 50%; background: transparent; color: inherit; }
+  .modulex-ust-iki-yuz-perde { position: fixed; inset: 0; z-index: 1; background: color-mix(in srgb, --text-- 45%, transparent); animation: modulex-ust-iki-yuz-sol 0.3s ease both; }
+  @keyframes modulex-ust-iki-yuz-sol { from { opacity: 0; } to { opacity: 1; } }
+
+  .modulex-ust-iki-yuz-govde { display: flex; align-items: center; gap: 12px 24px; padding-block: 14px; }
+  .modulex-ust-iki-yuz-yuzler { display: flex; flex: 1 1 auto; flex-wrap: wrap; align-items: center; gap: 10px 22px; min-width: 0; }
+  .modulex-ust-iki-yuz-anahtar { display: inline-grid; flex: none; grid-auto-columns: minmax(0, 1fr); grid-auto-flow: column; gap: 2px; padding: 4px; border-radius: 14px; background-color: --kartBg--; box-shadow: inset 0 0 0 1px --cizgi--; }
+  .modulex-ust-iki-yuz-yuzsec { min-height: 40px; padding-inline: 16px; border: 0; border-radius: 10px; background-color: transparent; color: inherit; font: inherit; font-size: 0.9rem; font-weight: 700; white-space: nowrap; transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; }
+  .modulex-ust-iki-yuz-yuzsec:hover { background-color: color-mix(in srgb, --text-- 7%, transparent); }
+  .modulex-ust-iki-yuz-yuzsec[aria-selected="true"] { background-color: --text--; color: --bg--; box-shadow: 0 6px 14px -8px color-mix(in srgb, --text-- 70%, transparent); }
+  .modulex-ust-iki-yuz-yuz { display: flex; flex: 1 1 auto; flex-wrap: wrap; align-items: center; gap: 8px 22px; min-width: 0; }
+  .modulex-ust-iki-yuz--yz .modulex-ust-iki-yuz-yuz:not([hidden]) { animation: modulex-ust-iki-yuz-don 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  @keyframes modulex-ust-iki-yuz-don { from { opacity: 0; transform: perspective(600px) rotateX(-70deg); } to { opacity: 1; transform: none; } }
+  .modulex-ust-iki-yuz-yliste { display: flex; flex-wrap: wrap; gap: 2px 18px; }
+  .modulex-ust-iki-yuz-yoge { display: inline-flex; align-items: center; min-height: 44px; color: inherit; font-weight: 600; text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-position: 50% 100%; background-repeat: no-repeat; background-size: 0 2px; transition: background-size 0.3s ease, color 0.2s ease; }
+  .modulex-ust-iki-yuz-yoge:hover, .modulex-ust-iki-yuz-yoge[aria-current="page"] { background-size: 100% 2px; color: --accentInk--; }
+  .modulex-ust-iki-yuz-yuz--bilgi { font-weight: 600; }
+  .modulex-ust-iki-yuz-yuz--bilgi .modulex-ust-iki-yuz-tel { font-size: 1.1rem; font-weight: 800; }
+  .modulex-ust-iki-yuz-govde > .modulex-ust-iki-yuz-dil { flex: none; }
+  .modulex-ust-iki-yuz:not(.modulex-ust-iki-yuz--yz) .modulex-ust-iki-yuz-yuzler { flex-direction: column; align-items: stretch; }
+  @media (max-width: 1024px) {
+    .modulex-ust-iki-yuz-govde { flex-wrap: wrap; }
+    .modulex-ust-iki-yuz-yuzler { order: 3; flex-basis: 100%; }
+    .modulex-ust-iki-yuz-govde > .modulex-ust-iki-yuz-dil { margin-inline-start: auto; }
+  }
+  @media (max-width: 768px) {
+    .modulex-ust-iki-yuz-yuzsec { padding-inline: 12px; font-size: 0.85rem; }
+    .modulex-ust-iki-yuz-yuz--bilgi .modulex-ust-iki-yuz-posta { flex-basis: 100%; }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-iki-yuz :is(.modulex-ust-iki-yuz-baslik, .modulex-ust-iki-yuz-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-iki-yuz-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-ust-iki-yuz { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-ust-iki-yuz *, .modulex-ust-iki-yuz *::before, .modulex-ust-iki-yuz *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-ust-iki-yuz";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const yuz = (s, P) => {
+        const liste = s.querySelector("." + P + "-anahtar");
+        const sekmeler = liste ? [...liste.querySelectorAll("." + P + "-yuzsec")] : [];
+        if (sekmeler.length < 2) return;
+        const yuzler = sekmeler.map((b) => document.getElementById(b.getAttribute("aria-controls")));
+        if (yuzler.some((y) => !y)) return;
+        liste.hidden = false;
+        liste.setAttribute("role", "tablist");
+        s.classList.add(P + "--yz");
+        const sec = (i, odak) => {
+          sekmeler.forEach((b, j) => {
+            const on = j === i;
+            b.setAttribute("aria-selected", String(on));
+            b.tabIndex = on ? 0 : -1;
+            yuzler[j].hidden = !on;
+          });
+          if (odak) sekmeler[i].focus();
+        };
+        sekmeler.forEach((b, i) => {
+          b.setAttribute("role", "tab");
+          yuzler[i].setAttribute("role", "tabpanel");
+          yuzler[i].setAttribute("aria-labelledby", b.id);
+          b.addEventListener("click", () => sec(i, false));
+          b.addEventListener("keydown", (e) => {
+            const n = sekmeler.length;
+            const rtl = getComputedStyle(s).direction === "rtl";
+            let h = -1;
+            if (e.key === "ArrowRight") h = (i + (rtl ? -1 : 1) + n) % n;
+            else if (e.key === "ArrowLeft") h = (i + (rtl ? 1 : -1) + n) % n;
+            else if (e.key === "Home") h = 0;
+            else if (e.key === "End") h = n - 1;
+            if (h !== -1) { e.preventDefault(); sec(h, true); }
+          });
+        });
+        s.addEventListener("keydown", (e) => { if (e.key === "Escape" && yuzler[0].hidden) sec(0, true); });
+        sec(0, false);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      yuz(s, P, az);
+    });
+  })();
+</script>

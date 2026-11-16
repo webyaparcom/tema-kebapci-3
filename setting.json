@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Safran Kebap: 1987'den beri Tahtani'de meşe kömürü ocakbaşı; kırk yılın hikâyesi, porsiyon tahtası ve telefonla masa ayırtma. Demo site; içerik kurgusaldır.",
+    "en": "Safran Kebap: an oak-charcoal grill house in Tahtani since 1987; forty years of story, a portion board and table bookings by phone. Demo site; content is fictional.",
+    "ar": "زعفران كباب: مشواة على فحم البلوط في تحتاني منذ عام 1987؛ حكاية أربعين عامًا ولوح حصص وحجز الطاولات بالهاتف. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "kebap, ocakbaşı, Adana, Ali Nazik, masa ayırtma, Gaziantep",
+    "en": "kebab, grill house, Adana, Ali Nazik, table booking, Gaziantep",
+    "ar": "كباب، مشواة، أضنة، علي نازك، حجز طاولة، غازي عنتاب"
+  },
+  "category": "Kurumsal",
+  "name": "Safran Kebap",
+  "domain": "kebapci-3.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "nunito",
+    "heading": "cormorant-garamond",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-naskh-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#E0A526",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "7px",
+    "--mx-radius-md": "12px",
+    "--mx-radius-lg": "17px",
+    "--mx-radius-xl": "23px"
+  },
+  "icon": "icon.png"
+}

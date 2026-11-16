@@ -1,0 +1,48 @@
+{
+  "name": {
+    "tr": "Ocak",
+    "en": "Hearth",
+    "ar": "الموقد"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 1,
+  "icon": "local_fire_department",
+  "desing": {
+    "header": [],
+    "body": [
+      "w5qh0r",
+      "jpmgos",
+      "12quhi"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Kırk yılın eğrisi, ocak kuralları ve misafir puanları (kurgusal).",
+    "en": "Forty years on a curve, grill rules and guest scores (fictional).",
+    "ar": "منحنى أربعين عامًا وقواعد الموقد وتقييمات الضيوف (افتراضية)."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Ocak",
+    "en": "Hearth",
+    "ar": "الموقد"
+  },
+  "keyword": {
+    "tr": "ocakbaşı, hikâye",
+    "en": "grill house, story",
+    "ar": "مشواة، قصة"
+  },
+  "text": {},
+  "update": "2026-11-16T20:35:11.695Z",
+  "date": "2026-10-30"
+}
