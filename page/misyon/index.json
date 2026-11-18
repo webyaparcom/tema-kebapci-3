@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Kırk yıllık ocağın tadını aynı sabır ve aynı kömürle sürdürmek.</p>",
     "en": "<h2>Our mission</h2>\n<p>To keep the taste of a forty-year-old hearth with the same patience and the same charcoal.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>أن نحافظ على مذاق موقد عمره أربعون عامًا بالصبر نفسه والفحم نفسه.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>أن نحافظ على مذاق موقد عمره أربعون عامًا بالصبر نفسه والفحم نفسه.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Den Geschmack eines vierzig Jahre alten Herdes mit derselben Geduld und demselben Kohlen zu bewahren.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Сохранить вкус сорокалетнего очага с тем же терпением и тем же углем.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T20:25:24.215Z",
   "update": "2026-11-16T20:35:11.705Z",

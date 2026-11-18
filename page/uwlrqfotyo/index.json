@@ -3,17 +3,23 @@
   "name": {
     "tr": "Menü",
     "en": "Menu",
-    "ar": "القائمة"
+    "ar": "القائمة",
+    "de": "Menü",
+    "ru": "Меню"
   },
   "description": {
     "tr": "Ocak tahtası ve porsiyon fiyatları (örnek).",
     "en": "The grill board and portion prices (examples).",
-    "ar": "لوح الموقد وأسعار الحصص (أمثلة)."
+    "ar": "لوح الموقد وأسعار الحصص (أمثلة).",
+    "de": "Herdtafel und Portionspreise (Beispiel).",
+    "ru": "Доска у плиты и цены за порцию (пример)."
   },
   "keyword": {
     "tr": "kebap, menü, fiyat",
     "en": "kebab, menu, price",
-    "ar": "كباب، قائمة، سعر"
+    "ar": "كباب، قائمة، سعر",
+    "de": "Kebab, Menü, Preise",
+    "ru": "кебаб, меню, цены"
   },
   "path": "hizmetler",
   "icon": "restaurant_menu",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Menü",
     "en": "Menu",
-    "ar": "القائمة"
+    "ar": "القائمة",
+    "de": "Menü",
+    "ru": "Меню"
   },
   "date": "2026-11-16T20:25:24.368Z",
   "update": "2026-11-16T20:35:11.691Z"

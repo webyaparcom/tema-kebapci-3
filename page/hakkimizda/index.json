@@ -2,7 +2,9 @@
   "name": {
     "tr": "Ocak",
     "en": "Hearth",
-    "ar": "الموقد"
+    "ar": "الموقد",
+    "de": "Grill",
+    "ru": "Мангал"
   },
   "status": "play",
   "category": "",
@@ -24,7 +26,9 @@
   "description": {
     "tr": "Kırk yılın eğrisi, ocak kuralları ve misafir puanları (kurgusal).",
     "en": "Forty years on a curve, grill rules and guest scores (fictional).",
-    "ar": "منحنى أربعين عامًا وقواعد الموقد وتقييمات الضيوف (افتراضية)."
+    "ar": "منحنى أربعين عامًا وقواعد الموقد وتقييمات الضيوف (افتراضية).",
+    "de": "Die vierzigjährige Kurve, die Herdregeln und Gästebewertungen (fiktiv).",
+    "ru": "Сорокалетняя кривая, правила очага и оценки гостей (условные)."
   },
   "spot": {
     "tr": "",
@@ -35,12 +39,16 @@
   "title": {
     "tr": "Ocak",
     "en": "Hearth",
-    "ar": "الموقد"
+    "ar": "الموقد",
+    "de": "Grill",
+    "ru": "Мангал"
   },
   "keyword": {
     "tr": "ocakbaşı, hikâye",
     "en": "grill house, story",
-    "ar": "مشواة، قصة"
+    "ar": "مشواة، قصة",
+    "de": "Grillherd, Geschichte",
+    "ru": "очаг-гриль, история"
   },
   "text": {},
   "update": "2026-11-16T20:35:11.695Z",
