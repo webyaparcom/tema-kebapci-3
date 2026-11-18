@@ -4,12 +4,16 @@
   "description": {
     "tr": "Safran Kebap: 1987'den beri Tahtani'de meşe kömürü ocakbaşı; kırk yılın hikâyesi, porsiyon tahtası ve telefonla masa ayırtma. Demo site; içerik kurgusaldır.",
     "en": "Safran Kebap: an oak-charcoal grill house in Tahtani since 1987; forty years of story, a portion board and table bookings by phone. Demo site; content is fictional.",
-    "ar": "زعفران كباب: مشواة على فحم البلوط في تحتاني منذ عام 1987؛ حكاية أربعين عامًا ولوح حصص وحجز الطاولات بالهاتف. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "زعفران كباب: مشواة على فحم البلوط في تحتاني منذ عام 1987؛ حكاية أربعين عامًا ولوح حصص وحجز الطاولات بالهاتف. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Safran Kebap: seit 1987 ein Eichenkohle-Ocakbaşı in Tahtani; die Geschichte von vierzig Jahren, das Portionsbrett und Tischreservierung per Telefon. Demo-Website; der Inhalt ist fiktiv.",
+    "ru": "Safran Kebap: с 1987 года оджакбаши на дубовом угле в Тахтани; история сорока лет, доска с порциями и бронирование стола по телефону. Демо-сайт; содержание вымышлено."
   },
   "keyword": {
     "tr": "kebap, ocakbaşı, Adana, Ali Nazik, masa ayırtma, Gaziantep",
     "en": "kebab, grill house, Adana, Ali Nazik, table booking, Gaziantep",
-    "ar": "كباب، مشواة، أضنة، علي نازك، حجز طاولة، غازي عنتاب"
+    "ar": "كباب، مشواة، أضنة، علي نازك، حجز طاولة، غازي عنتاب",
+    "de": "Kebab, Ocakbaşı, Adana, Ali Nazik, Tischreservierung, Gaziantep",
+    "ru": "кебаб, оджакбаши, Адана, Али Назик, бронирование стола, Газиантеп"
   },
   "category": "Kurumsal",
   "name": "Safran Kebap",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

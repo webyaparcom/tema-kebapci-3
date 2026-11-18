@@ -5,12 +5,16 @@
       "name": {
         "tr": "Menü",
         "en": "Menu",
-        "ar": "القائمة"
+        "ar": "القائمة",
+        "de": "Menü",
+        "ru": "Меню"
       },
       "description": {
         "tr": "Ocak tahtası ve porsiyon fiyatları (örnek).",
         "en": "The grill board and portion prices (examples).",
-        "ar": "لوح الموقد وأسعار الحصص (أمثلة)."
+        "ar": "لوح الموقد وأسعار الحصص (أمثلة).",
+        "de": "Herdtafel und Portionspreise (Beispiel).",
+        "ru": "Доска у плиты и цены за порцию (пример)."
       },
       "path": "hizmetler",
       "icon": "restaurant_menu",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Ocak",
         "en": "Hearth",
-        "ar": "الموقد"
+        "ar": "الموقد",
+        "de": "Grill",
+        "ru": "Мангал"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -52,14 +58,18 @@
       "description": {
         "tr": "Kırk yılın eğrisi, ocak kuralları ve misafir puanları (kurgusal).",
         "en": "Forty years on a curve, grill rules and guest scores (fictional).",
-        "ar": "منحنى أربعين عامًا وقواعد الموقد وتقييمات الضيوف (افتراضية)."
+        "ar": "منحنى أربعين عامًا وقواعد الموقد وتقييمات الضيوف (افتراضية).",
+        "de": "Die vierzigjährige Kurve, die Herdregeln und Gästebewertungen (fiktiv).",
+        "ru": "Сорокалетняя кривая, правила очага и оценки гостей (условные)."
       }
     },
     {
       "name": {
         "tr": "İletişim",
         "en": "Contact",
-        "ar": "اتصل بنا"
+        "ar": "اتصل بنا",
+        "de": "Kontakt",
+        "ru": "Контакты"
       },
       "status": "play",
       "id": "iletisim",
@@ -80,7 +90,9 @@
       "description": {
         "tr": "Adres, ocak saatleri ve harita.",
         "en": "Address, grill hours and map.",
-        "ar": "العنوان وساعات الموقد والخريطة."
+        "ar": "العنوان وساعات الموقد والخريطة.",
+        "de": "Adresse, Herdzeiten und Karte.",
+        "ru": "Адрес, часы работы очага и карта."
       }
     }
   ],
